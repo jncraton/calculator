@@ -1,7 +1,35 @@
 <html>
 <head>
+<style>
+body {
+  width:600px;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 72px;
+}
+input,#result {
+  font-size: 48px;
+}
+</style>
 </head>
 <body>
 <h1>Calculator</h1>
+
+<input name=expression placeholder="Enter expression"></input>1
+
+<div id=result></div>
+
+<script>
+  let expression = document.querySelector('input[name=expression]')
+
+  expression.addEventListener('input', (e) => {
+    let expression_value = e.target.value
+
+    let result = Function('return ' + expression_value)()
+
+    document.getElementById('result').innerHTML = result
+  })
+</script>
 </body>
 </html>
