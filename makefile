@@ -1,6 +1,6 @@
 all: dist/index.html
 
-dist/index.html: templates/index.html
+dist/index.html: render.py templates/index.html
 	python3 render.py
 
 test: dist/index.html
