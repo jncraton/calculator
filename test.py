@@ -7,7 +7,7 @@ options = Options()
 options.headless = True
 
 with webdriver.Firefox(options=options) as browser:
-    browser.get(f'file://{os.getcwd()}/index.html')
+    browser.get(f'file://{os.getcwd()}/dist/index.html')
     assert('Calculator' in browser.page_source)
 
     expression = browser.find_element_by_name('expression')
