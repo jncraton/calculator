@@ -14,3 +14,8 @@ with webdriver.Firefox(options=options) as browser:
     expression.clear()
     expression.send_keys('273 + 571')
     assert('844' in browser.page_source)
+
+    expression = browser.find_element_by_name('expression')
+    expression.clear()
+    expression.send_keys('2 * standard_state_pressure')
+    assert('200000.0' in browser.page_source)
