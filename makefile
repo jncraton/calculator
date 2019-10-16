@@ -5,3 +5,6 @@ dist/index.html: index.html
 
 test:
 	python3 test.py
+
+clean:
+	rm -f dist/*
